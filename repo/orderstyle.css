@@ -1,7 +1,6 @@
 body 
 {
-	background-color: black;
-	background-image: url("img/tlo4.gif");
+	background-image: url("img/logo1.png");
     height: 100%;
 	width: 100%;
 	background-repeat: no-repeat;
@@ -12,17 +11,98 @@ body
 	
 }
 
+/* The Modal (background) */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+    padding-top: 60px;
+}
+
+/* Modal Content/Box */
+.modal-content {
+    background-color: #fefefe;
+	background-repeat: no-repeat;
+	background-size: cover;
+    margin: 5px auto; /* 15% from the top and centered */
+    border: 1px solid #888;
+    width: 80%; /* Could be more or less, depending on screen size */
+}
+
+/* The Close Button */
+.close {
+    /* Position it in the top right corner outside of the modal */
+    position: absolute;
+    right: 25px;
+    top: 0; 
+    color: #000;
+    font-size: 35px;
+    font-weight: bold;
+}
+
+/* Close button on hover */
+.close:hover,
+.close:focus {
+    color: red;
+    cursor: pointer;
+}
+
+/* Add Zoom Animation */
+.animate {
+    -webkit-animation: animatezoom 0.6s;
+    animation: animatezoom 0.6s
+}
+
+@-webkit-keyframes animatezoom {
+    from {-webkit-transform: scale(0)} 
+    to {-webkit-transform: scale(1)}
+}
+
+@keyframes animatezoom {
+    from {transform: scale(0)} 
+    to {transform: scale(1)}
+}
+
+
+
+#logo
+{
+	height: 10%;
+	width: 50%;
+	width: 785px;
+	height: 260px;
+	padding: 5px;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 5px;
+}
+
 #container
 {
-	background-color: transparent;	
-	width: 300px;
-	padding: 50px;
+	background-color: transparent;
+	border: 5px solid orange; 
+    background-image: url("img/tlo4.gif");
+	height: 100%;
+	background-repeat: no-repeat;
+	background-position: auto;
+	background-size: cover;
+	width: 100%;
+	width: 500px;
+	padding: 20px;
 	margin-left: auto;
 	margin-right: auto;
 	margin-top: 100px;
 	-webkit-box-shadow: 3px 3px 30px 5px rgba(204,204,204,0.9);
 	-moz-box-shadow: 3px 3px 30px 5px rgba(204,204,204,0.9);
 	box-shadow: 3px 3px 30px 5px rgba(204,204,204,0.9);
+
 }
 
 input[type=text],
@@ -112,4 +192,43 @@ input:-ms-input-placeholder
 input:focus:-ms-input-placeholder
 {
     color: #428C42;
+}
+
+.button {
+  border-radius: 4px;
+  background-color: #f4511e;
+  border: none;
+  color: #FFFFFF;
+  text-align: center;
+  font-size: 28px;
+  padding: 10px;
+  width: 200px;
+  transition: all 0.5s;
+  cursor: pointer;
+  margin: 12px;
+}
+
+.button span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+
+.button span:after {
+  content: '\00bb';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+}
+
+.button:hover span {
+  padding-right: 25px;
+}
+
+.button:hover span:after {
+  opacity: 1;
+  right: 0;
 }
